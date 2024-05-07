@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu-container">
+            <img class="logo" src="./img/Logo67x67.png">
+            <nav class="menu">
+
+                <a href="#inicio" class="menu-item">Home</a>
+                <a href="#acerca" class="menu-item">About Us</a>
+                <a href="#oferta" class="menu-item">Services</a>
+                <a href="#contacto" class="menu-item">Contact</a>
+                <a href="./intranet.html" id="intranet" class="menu-item">Intranet</a>
+
+                <button id="loginBtn" class="loginBtn">Log In</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Sign In</h2>
+                        <form id="loginForm">
+                            <div class="userForm">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username">
+                            </div>
+                            <div class="passForm">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password">
+                            </div>
+                            <button type="submit" class="loginBtn">Log In</button>
+                        </form>
+                    </div>
+                </div>
+                <button id="registerBtn" class="loginBtn">Sign Up</button>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close2">&times;</span>
+                        <h2>Sign Up</h2>
+                        <form id="registerForm">
+                            <div class="userForm">
+                                <label for="username2">Username</label>
+                                <input type="text" id="username2" name="username2">
+                            </div>
+                            <div class="passForm">
+                                <label for="password2">Password:</label>
+                                <input type="password" id="password2" name="password2">
+                            </div>
+
+                            <div class="passForm">
+                                <label for="emailregistro">Email:</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <button type="submit" class="registerBtn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <button id="carrito" class="carrito"></button>
+            <div id="myModal3" class="modal">
+                <div class="modal-content">
+                    <ul id="listaCarrito"></ul>
+                    <div id="subtotal">Subtotal: 0€</div>
+                    <div id="taxes">Taxes: 0€</div>
+                    <div id="total">Total: 0€</div>
+                    <button id="PayBtn" class="loginBtn">Check Out</button>
+                    <span class="close3">&times;</span>
+                </div>
+            </div>
+    </header>
+
+    <div id="inicio" class="contenidoIntro">
+        <h3>Nespresson't</h3>
+        <h2>A taste of little things</h2>
+    </div>
+
+    <div id="acerca" class="containerMedio">
+        <div class="textoIntroduccion">
+            <span>Serve You Since 1988</span>
+            <h2>Welcome To Nespresson't</h2>
+            <p>At Café Galaxia, we take pride in being pioneers in merging science fiction and fantasy with the world of
+                coffee. From our humble beginnings in 2020 as a purely online initiative, we have grown to become a
+                galactic force in the coffee industry. Our team consists of passionate science fiction enthusiasts and
+                coffee experts, whose dedication is reflected in every aspect of our business. From selecting coffee
+                beans from the most remote regions to creating innovative recipes inspired by distant worlds, every step
+                of our process is infused with creativity and attention to detail. At Café Galaxia, we not only sell
+                coffee, but we also offer a unique sensory experience, where each cup is a portal to adventure and
+                imagination. Join us as we explore the frontiers of the coffee universe and beyond.</p>
+        </div>
+    </div>
+
+    <div class="titulo">Café</div>
+    <div class="sliderAPI" id="peliOutput"></div>
+
+    <div class="titulo-select">
+        <div class="titulo" id="contenido">Categorías</div>
+        <section id="categoria">
+            <div class="select-container">
+                <select id="opciones" onchange="cambiarContenido()">
+                    <option value="none">Elegir categoría</option>
+                    <option value="Capsule">Capsula</option>
+                    <option value="Bean">Grano</option>
+                    <option value="molido">Molido</option>
+                </select>
+            </div>
+        </section>
+    </div>
+    <div class="slider" id="peliOutputGenero"></div>
+
+    <div id="oferta" class="container">
+        <div class="containerOferta">
+            <div class="banner" style="background-image: url('img/DnD2.png');">
+                <div class="textoOferta">
+                    <span>NEW CAPSULE! Dungeons & Dragons Limited Edition</span>
+                    <h2>Dungeons & Dragons</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="titulo-select">
+        <div class="titulo-select">
+            <section id="categoria">
+                <div class="titulo" id="opciones">
+                    <button class="categoria-btn" value="none">All Products</button>
+                    <button class="categoria-btn" value="Capsule">Coffee pods</button>
+                    <button class="categoria-btn" value="Bean">Coffee bag</button>
+                </div>
+            </section>
+        </div>
+        
+        <div id="contenedor" class="productos"></div>
+    </div>
+
+
+    <div id="contacto" class="containerFormulario">
+        <h2>Contact Form</h2>
+        <div class="contact-form">
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <!-- Logo -->
+        <img src="./img/Logo67x67.png" alt="Logo de la empresa">
+
+        <!-- Datos de contacto -->
+        <p>Phone: +34 000 000 000</p>
+        <p>Email: contact@nespresson't.com</t>
+        </p>
+
+        <!-- Copyright -->
+        <p>&copy; 2024 NessPresson't. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+
+<script src='./js/main.js'></script>
+<script src='./js/DataRepository.js'></script>
+<script src='./js/DataService.js'></script>
+
+</html>

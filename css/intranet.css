@@ -1,0 +1,190 @@
+@font-face {
+    font-family: mordredRegular;
+    src: url('../fonts/mordred.regular.ttf');
+  }
+  
+  @font-face {
+    font-family: mordredBold;
+    src: url('../fonts/mordred.bold.ttf');
+  }
+  
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenidoIntroIntranet{
+    background-image: url(../img/medievalTavernDesenfocado.png);
+    background-position: no-repeat;
+    background-size: cover;
+    height: 450px;
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contenidoIntroIntranet h1 {
+    font-size: 30px;
+    font-family: 'mordredBold';
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    width: 30%;
+  }
+  
+  .contenidoIntroIntranet h3{
+    font-weight: 800;
+    color: #f9b000;
+    line-height: 1.7;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'mordredBold';
+    font-size: 30px;
+  }
+
+  .logo {
+    float: left; /* Alinear a la izquierda */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 99%;
+    z-index: 999; /* Asegura que el encabezado esté en la parte superior */
+    position: fixed;
+  }
+
+.menu-container-intranet {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.menu {
+    text-align: center; /* Alinear al centro */
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.menu-intranet{
+    margin-left: 10px;      
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+  }
+
+  .menu-intranet:hover {
+    text-decoration: underline;
+}
+
+.loginBtn {
+    background-color: #bf6428;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .loginBtn:hover {
+    background-color: #e87000;
+  }
+
+
+.slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+#comite{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.introComite{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: 'mordredBold';
+}
+
+  .funcionesComite{
+    color: #000000;
+    font-family: 'mordredBold';
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .textoFunciones{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    font-family: 'mordredBold';
+  }
+
+  #prev{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.introPrevencion{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: 'mordredBold';
+}
+
+  .prevencion{
+    color: #000000;
+    font-family: 'mordredBold';
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+  footer {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado interior (arriba y abajo) */
+    text-align: center; /* Alinear contenido al centro */
+}
+
+footer p {
+    margin: 0; /* Eliminar margen interno */
+}
+
+footer img {
+    width: 67PX; /* Ancho del logo */
+    margin-bottom: 10px; /* Espaciado inferior */
+}

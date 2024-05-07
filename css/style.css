@@ -1,0 +1,527 @@
+@font-face {
+  font-family: mordredRegular;
+  src: url('../fonts/mordred.regular.ttf');
+}
+
+@font-face {
+  font-family: mordredBold;
+  src: url('../fonts/mordred.bold.ttf');
+}
+
+
+
+/* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  /* Estilos para el header */
+
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 99%;
+    z-index: 999; /* Asegura que el encabezado esté en la parte superior */
+    position: fixed;
+  }
+  /* Estilos para el contenedor del menú */
+  .menu-container {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+  }
+
+
+  .logo {
+    float: left; /* Alinear a la izquierda */
+}
+
+.menu {
+    text-align: center; /* Alinear al centro */
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+
+  /* Estilos para los elementos del menú */
+  .menu-item {
+      margin-left: 10px;      
+      text-decoration: none;
+      color: #fff;
+  }
+  .menu-item:hover {
+      text-decoration: underline;
+  }
+
+
+
+#intranet{
+  display: none;
+}
+
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.modal-content {
+  background-color: #9c4923;
+  margin: 15% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  max-width: 30%;
+  font-family:'mordredBold';
+  ;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+/* Estilos para el formulario dentro de la ventana modal */
+#loginForm {
+  margin-top: 20px;
+}
+.userForm,
+.passForm {
+  margin-bottom: 10px;
+}
+.userForm label,
+.passForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+.userForm input,
+.passForm input {
+  width: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*ESTILOS MODAL REGISTRO*/
+#registerForm {
+margin-top: 20px;
+}
+
+.emailForm{
+  margin-bottom: 10px;
+}
+.emailForm {
+  display: block;
+  margin-bottom: 5px;
+}
+.emailForm  {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.close2 {
+position: absolute;
+top: 0;
+right: 0;
+cursor: pointer;
+padding: 10px;
+}
+
+.registerBtn {
+background-color: #bf6428;
+color: white;
+border: none;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+}
+.registerBtn:hover {
+background-color: #e87000;
+}
+
+
+/* Estilos para el botón de inicio de sesión */
+.loginBtn {
+  background-color: #bf6428;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.loginBtn:hover {
+  background-color: #e87000;
+}
+
+/*CARRITO*/
+.carrito {
+  background-image: url("../img/carritocompra.png");
+  background-size: contain;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  height: 67px;
+  width: 67px;
+  background-color: transparent;
+  border: none;
+}
+.carrito:hover {
+  background-color: #e87000;
+}
+
+.close3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* CSS para la imagen dentro de la lista del carrito */
+#listaCarrito img {
+      max-width:100%; /* Cambia este valor según el tamaño deseado */
+      height: auto; /* Esto permite mantener la proporción de la imagen */
+      
+}
+
+
+/*PARTE BODY*/
+.imagenIntro{
+  background-image: url("../img/medievalTavernDesenfocado.png");
+  height: 800px;
+  width: auto;
+  background-size: cover;
+}
+
+.contenidoIntro{
+  background-image: url(../img/medievalTavernDesenfocado.png);
+  background-position: no-repeat;
+  background-size: cover;
+  height: 450px;
+  text-align: center;
+  padding-top: 200px;
+  color: white;
+}
+
+.contenidoIntro h3{
+  font-weight: 800;
+  color: #f9b000;
+  line-height: 1.7;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-family: 'mordredBold';
+  font-size: 30px;
+}
+
+.contenidoIntro h2 {
+  font-size: 70px;
+  font-family: 'mordredBold';
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.contenidoIntro p {
+  font-family: "mordredBold";
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ffffff;
+  margin: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+/*MODAL DE LAS TARJETAS PARA LOS CAFES*/
+
+.titulo {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.titulo-select > .titulo {
+  font-size:17px;
+}
+
+
+#peliOutput,#peliOutputFav, #peliOutputGenero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    
+  width: 100%;
+  height: auto;
+}
+
+#peliOutputGenero{
+  margin-bottom: 40px;
+}
+
+
+#peliOutputFav::-webkit-scrollbar,
+#peliOutputGenero::-webkit-scrollbar,
+#peliOutput::-webkit-scrollbar {
+  display: none;
+}
+
+.sliderAPI{
+  display: flex;
+  justify-content: center;    
+  width: 100%;
+  
+}
+
+
+.card {
+  text-align: center;
+  color: white;
+  margin: 5px;
+  /*width: 150px;
+  height: 250px;*/
+  width: 300px;
+  height: 400px;
+  display: block;
+  justify-content: space-between;
+  background-color: rgb(242, 187, 119);
+  border-radius: 25px;
+}
+
+.card h2 {
+  font-size: 16px;
+}
+.card p{
+  display: none;
+}
+
+.card img {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  border-radius: 50px; /* Ajusta el radio de los bordes según lo desees */
+  border: 1px solid ;
+}
+
+
+.card img:hover{
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.titulo-select {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.select-container {
+  display: flex; /* Convertir en contenedor flex */
+  align-items: center; /* Alinear elementos horizontalmente */
+  flex-grow: 1; /* El contenedor del select ocupa todo el espacio restante */
+}
+
+.select-container select {
+  width: 140px; /* Ancho del select */
+  padding: 5px; /* Espacio interno */
+  font-size: 14px; /* Tamaño de la fuente */
+  color: white; /* Color del texto */
+  background-color: #0E0F16; /* Color de fondo casi negro */
+  border: 1px solid #0E0F16; /* Borde del select */
+  border-radius: 20px; /* Bordes redondeados */
+  outline: none; /* Quita el borde de enfoque */
+  margin-top: 12px;
+}
+/*/////////*/
+
+
+.containerMedio{
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 100px;
+}
+
+.textoIntroduccion span{
+  margin-top: 90px;
+  font-weight: 800;
+  color: #f9b000;
+  line-height: 1.7;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'mordredBold';
+  font-size: 20px;
+}
+
+.textoIntroduccion h2 {
+  font-size: 70px;
+  font-family: 'mordredBold';
+  color: rgb(68, 68, 68);
+  line-height: 1;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.textoIntroduccion p {
+  font-family: "mordredBold";
+  font-size: 20px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.container {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.containerOferta{
+  text-align: center;
+}
+
+.banner {
+  color: white;
+  padding-top: 150px;
+  height: 500px;
+  width: 900px;
+  align-items: center;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+}
+
+
+.textoOferta span {
+  font-size: 30px;
+  font-family: "mordredBold";
+  color: white;
+  line-height: 2.4;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.textoOferta h2 {
+  font-size: 60px;
+  font-family: 'mordredBold';
+  color: white;
+  line-height: 1;
+}
+
+.textoOferta h3 {
+    font-size: 16px;
+    font-family: "mordredBold";
+    line-height: 1.7;
+}
+
+
+/*FORMULARIO DE CONTACTO*/
+
+.containerFormulario{
+  text-align: center;
+  padding-top: 100px;
+}
+
+    /* Estilos para el formulario */
+    .contact-form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #ffcb90;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .contact-form h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+  }
+  .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+  }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+  }
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+      outline: none;
+      border-color: #007bff;
+  }
+  .contact-form textarea {
+      height: 150px;
+  }
+  .contact-form button {
+      background-color: #bf6428;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  .contact-form button:hover {
+      background-color: #e87000;
+  }
+
+
+  /*FOOTER*/
+
+  footer {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado interior (arriba y abajo) */
+    text-align: center; /* Alinear contenido al centro */
+}
+
+footer p {
+    margin: 0; /* Eliminar margen interno */
+}
+
+footer img {
+    width: 67PX; /* Ancho del logo */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
