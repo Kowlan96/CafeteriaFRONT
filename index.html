@@ -99,22 +99,23 @@
     </div>
 
     <div class="titulo">Café</div>
-    <div class="sliderAPI" id="peliOutput"></div>
 
     <div class="titulo-select">
-        <div class="titulo" id="contenido">Categorías</div>
-        <section id="categoria">
-            <div class="select-container">
-                <select id="opciones" onchange="cambiarContenido()">
-                    <option value="none">Elegir categoría</option>
-                    <option value="Capsule">Capsula</option>
-                    <option value="Bean">Grano</option>
-                    <option value="molido">Molido</option>
-                </select>
-            </div>
-        </section>
+        <div class="titulo-select">
+            <section id="categoria">
+                <div class="titulo" id="opciones">
+                    <button class="categoria-btn" value="none">All Products</button>
+                    <button class="categoria-btn" value="Capsule">Coffee pods</button>
+                    <button class="categoria-btn" value="Bean">Coffee bag</button>
+                </div>
+            </section>
+        </div>
+        <div id="contenedor" class="productos"></div>
     </div>
     <div class="slider" id="peliOutputGenero"></div>
+
+    <div class="sliderAPI" id="peliOutput"></div>
+
 
     <div id="oferta" class="container">
         <div class="containerOferta">
@@ -127,19 +128,7 @@
         </div>
     </div>
 
-    <div class="titulo-select">
-        <div class="titulo-select">
-            <section id="categoria">
-                <div class="titulo" id="opciones">
-                    <button class="categoria-btn" value="none">All Products</button>
-                    <button class="categoria-btn" value="Capsule">Coffee pods</button>
-                    <button class="categoria-btn" value="Bean">Coffee bag</button>
-                </div>
-            </section>
-        </div>
-        
-        <div id="contenedor" class="productos"></div>
-    </div>
+
 
 
     <div id="contacto" class="containerFormulario">

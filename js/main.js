@@ -2,6 +2,11 @@ let eliminado = 0;
 let iniciado = false;
 let yaexiste = false;
 let divCantidadRepetido;
+
+function hideCafe(){
+    document.getElementById("peliOutput").style.display = "none";
+}
+
 /*LOGIN*/
 async function login() {
     const datos = {
@@ -435,11 +440,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     categoriaBtns.forEach(btn => {
         
         btn.addEventListener('click', async () => {
-            const categoria = btn.value;
-            console.log(categoria);
+            const tipoCafe = btn.value;
+            console.log(tipoCafe);
             try {
                 let response;
-                if (categoria === 'none') {
+                if (tipoCafe === 'none') {
                   console.log("funciono productos");
                     // Si se selecciona "none", realizar la solicitud para obtener todos los productos
                     response = await fetch(`http://localhost:3000/producto`); 
@@ -471,7 +476,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }); 
 
     //LISTAR POR CATEGORIA
-   /* opciones.addEventListener('change', async () => {
+    /*opciones.addEventListener('change', async () => {
         const tipoCafe = opciones.value;
 
         console.log(tipoCafe)
@@ -513,7 +518,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-function cambiarContenido() {
+/*function cambiarContenido() {
     // Obtener el elemento select y el div
     var select = document.getElementById("opciones");
     var divContenido = document.getElementById("contenido");
@@ -538,7 +543,7 @@ function cambiarContenido() {
         default:
             divContenido.textContent = "Capsule";
     }
-}
+}*/
 
 
 
