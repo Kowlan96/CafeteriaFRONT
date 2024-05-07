@@ -89,14 +89,14 @@
   border-radius: 5px;
   max-width: 30%;
   font-family:'mordredBold';
-  ;
 }
+
 .close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
   cursor: pointer;
-  padding: 10px;
 }
 /* Estilos para el formulario dentro de la ventana modal */
 #loginForm {
@@ -140,11 +140,11 @@ margin-top: 20px;
 }
 
 .close2 {
-position: absolute;
-top: 0;
-right: 0;
-cursor: pointer;
-padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .registerBtn {
@@ -198,10 +198,10 @@ background-color: #e87000;
 
 .close3 {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
   cursor: pointer;
-  padding: 10px;
 }
 
 /* CSS para la imagen dentro de la lista del carrito */
