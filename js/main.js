@@ -548,16 +548,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 function renderMovies(productData) {
-    const peliOutput = document.getElementById('peliOutput');
-    peliOutput.innerHTML = '';
+    const peliOutputGenero = document.getElementById('peliOutputGenero');
+    peliOutputGenero.innerHTML = '';
     if (productData) {
         productData.forEach(element => {
             console.log(productData[[element]]);
             card = crearCard(element);
-            peliOutput.appendChild(card);
+            peliOutputGenero.appendChild(card);
         })
     } else {
-        peliOutput.innerHTML = `<p>Error al cargar los datos del Movies.</p>`;
+        peliOutputGenero.innerHTML = `<p>Error al cargar los datos del Movies.</p>`;
     }
 }
 
