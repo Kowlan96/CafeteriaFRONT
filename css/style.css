@@ -205,6 +205,13 @@ background-color: #e87000;
   cursor: pointer;
 }
 
+/*PRUEBAS PARA QUITAR EL CARRITO*/
+#listaCarrito {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
 /* CSS para la imagen dentro de la lista del carrito */
 #listaCarrito img {
       max-width:100%; /* Cambia este valor según el tamaño deseado */
@@ -328,6 +335,7 @@ background-color: #e87000;
   justify-content: space-between;
   /*background-color: rgb(242, 187, 119);*/
   background-image: url(../img/madera1.jpg);
+  background-size: cover;
   border-radius: 25px;
 }
 

@@ -475,35 +475,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
   }); 
 
-    //LISTAR POR CATEGORIA
-    /*opciones.addEventListener('change', async () => {
-        const tipoCafe = opciones.value;
-
-        console.log(tipoCafe)
-        try {
-            //Realizamos una solicitud al servidor para obtener cafes por categoría
-            const response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
-
-            if (response.ok) {
-                const productData = await response.json();
-                console.log(productData);
-
-                //Esto limpia el contenedor antes de agregar nuevos cafes
-                peliOutputGenero.innerHTML = "";
-
-                //Esto agrega nuevos cafes al contenedor
-                productData.forEach(element => {
-                    const card = crearCard(element);
-                    peliOutputGenero.appendChild(card);
-                });
-            } else {
-                peliOutputGenero.innerHTML = `<p>Error al cargar los datos de las películas.</p>`;
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            peliOutputGenero.innerHTML = `<p>Error al cargar los datos de las películas.</p>`;
-        }
-    });*/
 
     botonFinalizarCompra = document.getElementById('PayBtn');
     botonFinalizarCompra.addEventListener('click', async () => {
@@ -518,32 +489,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-/*function cambiarContenido() {
-    // Obtener el elemento select y el div
-    var select = document.getElementById("opciones");
-    var divContenido = document.getElementById("contenido");
 
-    // Obtener el valor seleccionado
-    var opcionSeleccionada = select.options[select.selectedIndex].value;
-
-    // Cambiar el contenido del div según la opción seleccionada
-    switch (opcionSeleccionada) {
-        case "none":
-            divContenido.textContent = "Categoría";
-            break;
-        case "Capsule":
-            divContenido.textContent = "Capsule";
-            break;
-        case "Bean":
-            divContenido.textContent = "Bean";
-            break;
-        case "Molido":
-            divContenido.textContent = "Molido";
-            break;
-        default:
-            divContenido.textContent = "Capsule";
-    }
-}*/
 
 
 
@@ -782,11 +728,6 @@ function crearCard(productData) {
     cardContainer.addEventListener('click', () => {
         createModalForCard(card, productData);
     });
-
-
-
-
-
 
     return cardContainer;
 }
