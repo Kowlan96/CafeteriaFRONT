@@ -16,7 +16,7 @@ function showPrevencion() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("noticias").style.display = "none";
     document.getElementById("comite").style.display = "none";
-    document.getElementById("prev").style.display = "flex";
+    document.getElementById("prev").style.display = "inline-block";
 }
 
 function showAll(){
