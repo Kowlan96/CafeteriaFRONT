@@ -25,3 +25,26 @@ document.getElementById("noticias").style.display = "block";
 document.getElementById("comite").style.display = "none";
 document.getElementById("prev").style.display = "none";
 }
+
+//SLIDER NOTICIAS
+const slider = document.querySelector('.news-slider');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let counter = 0;
+const slideWidth = document.querySelector('.news-slide').clientWidth;
+
+nextBtn.addEventListener('click', () => {
+  counter++;
+  if (counter === slider.children.length) {
+    counter = 0;
+  }
+  slider.style.transform = `translateX(${-slideWidth * counter}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+  counter--;
+  if (counter < 0) {
+    counter = slider.children.length - 1;
+  }
+  slider.style.transform = `translateX(${-slideWidth * counter}px)`;
+});

@@ -100,6 +100,7 @@ header {
     border-radius: 5px;
     margin-right: 10px;
   }
+
   .loginBtn:hover {
     background-color: #e87000;
   }
@@ -115,6 +116,58 @@ header {
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
+  }
+
+  /*NOTICIAS*/
+  #noticias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .noticias img{
+    height: 50px;
+    width: 50px;
+  }
+
+  .news-slider-container {
+    position: relative;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .news-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    text-align: center;
+  }
+  
+  .news-slide {
+    flex: 0 0 100%;
+  }
+  
+  .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    left: 0px;
+  }
+  
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    right: 0px;
   }
 
 #comite{
