@@ -563,6 +563,7 @@ function crearCard(productData) {
         if (!yaexiste) {
             const nuevoElementoCarrito = document.createElement('div');
             nuevoElementoCarrito.textContent = productData.nombre_producto;
+            nuevoElementoCarrito.style.fontSize = "25px";
 
             const nuevaImagen = document.createElement('img');
             nuevaImagen.src = productData.imagen; // Reemplaza con la ruta de la imagen que deseas agregar
@@ -621,9 +622,16 @@ function crearCard(productData) {
                     const divtaxes = document.getElementById('taxes');
                     const divsubtotal = document.getElementById('subtotal');
                     const divtotal = document.getElementById('total');
-                    divtotal.textContent = 'Total: ' + 0 + '€';
-                    divsubtotal.textContent = 'Subtotal: ' + 0 + '€';
-                    divtaxes.textContent = 'Taxes: ' + 0 + '€';
+                    console.log(pedido.SUBTOTAL_PEDIDO);
+                    console.log(productData.precio_unitario);
+                    console.log(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario);
+                    console.log(pedido.IVA_PEDIDO);
+                    console.log(pedido.IVA_PEDIDO/100);
+                    console.log((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100));
+
+                    divtotal.textContent = 'Total: ' + ((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)+(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100)).toFixed(2) + '€';
+                    divsubtotal.textContent = 'Subtotal: ' + (pedido.SUBTOTAL_PEDIDO - productData.precio_unitario).toFixed(2) + '€';
+                    divtaxes.textContent = 'Taxes: ' + ((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)+(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100)-(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)).toFixed(2) + '€';
 
                     pedido.SUBTOTAL_PEDIDO = 0;
                     pedido.TOTAL_PEDIDO = 0;
@@ -681,6 +689,14 @@ function crearCard(productData) {
 
             const modal = document.getElementById('myModal3');
             modal.style.display = 'block';
+            
+            let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
+            const divtotal = document.getElementById('total');
+            const divtaxes = document.getElementById('taxes');
+            const divsubtotal = document.getElementById('subtotal');
+            divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
+            divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO + '€';
+            divtaxes.textContent = 'Taxes: ' + (pedido.TOTAL_PEDIDO - pedido.SUBTOTAL_PEDIDO).toFixed(2) + '€'
         }
 
         //let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
