@@ -229,13 +229,17 @@ background-color: #e87000;
 }
 
 .categoria-btn{
-  justify-content: center;
-  align-items: center;
+  background: none;
+  border: none;
 }
 
 .categoria-btn img{
   height: 100px;
   width: 100px;
+}
+
+.categoria-btn:hover{
+  cursor: pointer;
 }
 
 /*PARTE BODY*/
@@ -343,7 +347,7 @@ background-color: #e87000;
   display: block;
   justify-content: space-between;
   /*background-color: rgb(242, 187, 119);*/
-  background-image: url(../img/madera1.jpg);
+  background-image: url(../img/madera9.png);
   background-size: cover;
   border-radius: 25px;
 }
