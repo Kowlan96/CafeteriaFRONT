@@ -72,23 +72,24 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  /*overflow: auto;*/
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 .modal-content {
   background-color: #9c4923;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 10px;
   border: 1px solid #888;
   border-radius: 5px;
   max-width: 30%;
   font-family:'mordredBold';
+  color: white;
 }
 
 .close {
@@ -321,13 +322,12 @@ background-color: #e87000;
   text-align: center;
   color: white;
   margin: 5px;
-  /*width: 150px;
-  height: 250px;*/
   width: 300px;
   height: 400px;
   display: block;
   justify-content: space-between;
-  background-color: rgb(242, 187, 119);
+  /*background-color: rgb(242, 187, 119);*/
+  background-image: url(../img/madera1.jpg);
   border-radius: 25px;
 }
 

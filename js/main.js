@@ -605,6 +605,14 @@ function crearCard(productData) {
         };
         console.log(producto);
         await agregarAlCarrito(producto);
+
+        let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
+        const divtaxes = document.getElementById('taxes');
+        const divsubtotal = document.getElementById('subtotal');
+        const divtotal = document.getElementById('total');
+        divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO + '€';
+        divtaxes.textContent = 'Taxes: ' + (pedido.TOTAL_PEDIDO - pedido.SUBTOTAL_PEDIDO).toFixed(2) + '€';
+
         console.log(yaexiste);
         if (!yaexiste) {
             const nuevoElementoCarrito = document.createElement('div');
@@ -651,27 +659,9 @@ function crearCard(productData) {
             buttonSumarCantidad.setAttribute('data-card-id', productData.id_producto);
             nuevoElementoCarrito.appendChild(buttonSumarCantidad);
 
-
-
-            /*const buttonQuitarCarrito = document.createElement('button');
-            buttonQuitarCarrito.textContent = 'Eliminar del carrito';
-            buttonQuitarCarrito.setAttribute('data-card-id', productData.id_producto);
-            nuevoElementoCarrito.appendChild(buttonQuitarCarrito);*/
-
-            // Obtenemos la referencia a la lista del carrito
             const listaCarrito = document.getElementById('listaCarrito');
-
-            /*buttonQuitarCarrito.addEventListener("click", function () {
-                const productId = this.getAttribute('data-card-id'); // Obtén el ID del producto del atributo data-card-id
-                console.log(productId);
-                borrarDelCarrito(productId);
-                nuevoElementoCarrito.parentNode.removeChild(nuevoElementoCarrito);
-            });*/
-
-            // Añadimos el nuevo elemento a la lista del carrito
             listaCarrito.appendChild(nuevoElementoCarrito);
 
-            // Mostramos la ventana modal
             const modal = document.getElementById('myModal3');
             modal.style.display = 'block';
             console.log(nuevoElementoCarrito);
@@ -682,13 +672,20 @@ function crearCard(productData) {
                 if (eliminado == -1) {
                     nuevoElementoCarrito.parentNode.removeChild(nuevoElementoCarrito);
 
-                    let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
                     const divtaxes = document.getElementById('taxes');
                     const divsubtotal = document.getElementById('subtotal');
                     const divtotal = document.getElementById('total');
                     divtotal.textContent = 'Total: ' + 0 + '€';
-                    divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO + '€';
-                    divtaxes.textContent = 'Taxes: ' + (pedido.TOTAL_PEDIDO - pedido.SUBTOTAL_PEDIDO).toFixed(2) + '€';
+                    divsubtotal.textContent = 'Subtotal: ' + 0 + '€';
+                    divtaxes.textContent = 'Taxes: ' + 0 + '€';
+
+                    pedido.SUBTOTAL_PEDIDO = 0;
+                    pedido.TOTAL_PEDIDO = 0;
+
+                    // Actualizar el carrito y el pedido en el local storage
+                    localStorage.setItem('pedido', JSON.stringify(pedido));
+                    eliminado = 0;
+
 
                 } else {
 
@@ -740,8 +737,8 @@ function crearCard(productData) {
             modal.style.display = 'block';
         }
 
-        let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
-        const divtotal = document.getElementById('total');
+        //let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
+        /*const divtotal = document.getElementById('total');*/
         divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO + '€';
         yaexiste = false;
     });
