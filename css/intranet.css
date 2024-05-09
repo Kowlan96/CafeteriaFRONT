@@ -26,6 +26,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
   
   .contenidoIntroIntranet h1 {
@@ -120,9 +122,11 @@ header {
 
   /*NOTICIAS*/
   #noticias{
-    display: flex;
+    display: grid;
     flex-direction: column;
     text-align: center;
+    width: 50%;
+    margin: auto;
   }
 
   .noticias img{
@@ -257,7 +261,7 @@ header {
   }
 
 
-  footer {
+footer {
     background-color: #333; /* Color de fondo */
     color: #fff; /* Color del texto */
     padding: 20px 0; /* Espaciado interior (arriba y abajo) */
