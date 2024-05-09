@@ -194,12 +194,21 @@ header {
   }
 
   .textoFunciones{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    justify-content: space-between;
     color: rgb(0, 0, 0);
     font-size: 20px;
     width: 80%;
     margin: auto;
     font-family: 'mordredBold';
+  }
+
+  .funcion{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
   }
 
   #prev{
@@ -237,8 +246,8 @@ header {
   .enlaceTabla{
     background-image: url(../img/tablaRiesgos.png);
     background-color: transparent;
-    height: 400px;
-    width: 800px;
+    height: 200px;
+    width: 80%;
     background-size: cover;
     margin-top: 10px;
   }
