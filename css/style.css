@@ -98,7 +98,7 @@
   padding: 10px;
   border: 1px solid #888;
   border-radius: 5px;
-  max-width: 30%;
+  max-width: 20%;
   font-family:'mordredBold';
   color: white;
 }
@@ -217,9 +217,9 @@ background-color: #e87000;
 }
 
 /*PRUEBAS PARA QUITAR EL CARRITO*/
-/*#listaCarrito {
-
-}*/
+#listaCarrito {
+  display: block;
+}
 
 /* CSS para la imagen dentro de la lista del carrito */
 #listaCarrito img {

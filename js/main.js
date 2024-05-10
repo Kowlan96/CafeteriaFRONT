@@ -458,8 +458,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } else {
                   console.log("funciono categoria");
                     // De lo contrario, realizar la solicitud para obtener los productos de la categoría seleccionada
-                    //response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
-                    response = await fetchProductoCategoria(tipoCafe);
+                    response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
+                    //response = await fetchProductoCategoria(tipoCafe);
                 }
 
                 if (response.ok) {
@@ -568,6 +568,10 @@ function crearCard(productData) {
 
         console.log(yaexiste);
         if (!yaexiste) {
+
+            const modalContent = document.createElement('div');
+            modalContent.classList.add('modal-content');
+
             const nuevoElementoCarrito = document.createElement('div');
             nuevoElementoCarrito.textContent = productData.nombre_producto;
             nuevoElementoCarrito.style.fontSize = "25px";
@@ -576,8 +580,9 @@ function crearCard(productData) {
             nuevaImagen.src = productData.imagen; // Reemplaza con la ruta de la imagen que deseas agregar
             nuevaImagen.style.paddingLeft = '5px';
             nuevaImagen.style.paddingRight = '5px';
-            nuevaImagen.style.height = "50%";
-            nuevaImagen.style.width = "50%";
+            nuevaImagen.style.height = "200px";
+            nuevaImagen.style.width = "200px";
+            nuevaImagen.style.borderRadius = "50px";
             nuevaImagen.alt = 'Descripción de la imagen'; // Reemplaza con una descripción adecuada
             nuevoElementoCarrito.appendChild(nuevaImagen);
 
