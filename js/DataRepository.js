@@ -7,7 +7,7 @@ class DataRepository {
         return response.json();
     }
 
-    async fetchProductoCategoria(tema) {
+    async fetchProductoCategoria(tipoCafe) {
         const response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
         if (!response.ok) { 
             throw new Error(`HTTP error! status: ${response.status}`);

@@ -10,6 +10,7 @@ function showComite() {
     document.getElementById("noticias").style.display = "none";
     document.getElementById("comite").style.display = "flex";
     document.getElementById("prev").style.display = "none";
+    document.getElementById("calendario-entero").style.display = "none";
 }
 
 function showPrevencion() {
@@ -17,6 +18,7 @@ function showPrevencion() {
     document.getElementById("noticias").style.display = "none";
     document.getElementById("comite").style.display = "none";
     document.getElementById("prev").style.display = "inline-block";
+    document.getElementById("calendario-entero").style.display = "none";
 }
 
 function showAll(){
@@ -24,6 +26,7 @@ document.getElementById("inicio").style.display = "flex";
 document.getElementById("noticias").style.display = "block";
 document.getElementById("comite").style.display = "none";
 document.getElementById("prev").style.display = "none";
+document.getElementById("calendario-entero").style.display = "block";
 }
 
 //SLIDER NOTICIAS

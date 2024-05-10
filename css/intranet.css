@@ -18,7 +18,7 @@ body {
     background-image: url(../img/medievalTavernDesenfocado.png);
     background-position: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 500px;
     text-align: center;
     padding-top: 200px;
     color: white;
@@ -127,6 +127,7 @@ header {
     text-align: center;
     width: 50%;
     margin: auto;
+    padding-top: 20px;
   }
 
   .noticias img{
@@ -150,6 +151,7 @@ header {
   
   .news-slide {
     flex: 0 0 100%;
+    padding-top: 20px;
   }
   
   .prev {
@@ -195,6 +197,7 @@ header {
     font-family: 'mordredBold';
     font-size: 30px;
     text-align: center;
+    padding-top: 20px;
   }
 
   .textoFunciones{
@@ -213,6 +216,25 @@ header {
     display: flex;
     flex-direction: column;
     width: 45%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .textoFuncionesInfoExtra{
+    text-align: center;
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .link:hover {
+    color: red;
   }
 
   #prev{
@@ -229,12 +251,15 @@ header {
     display: flex;
     flex-direction: column;
     font-family: 'mordredBold';
+    padding-bottom: 20px;
 }
 
   .prevencion{
     color: #000000;
     font-family: 'mordredBold';
     font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .prevencionEnlace{
@@ -244,7 +269,8 @@ header {
     border: 1px solid #000; /* Borde opcional para visualizar mejor */
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
-
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .enlaceTabla{
@@ -334,12 +360,19 @@ text-align: center;
 position: relative;
 }
 
+.containerCalendario{
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 #calendario-entero{
 display: block;
 flex-direction: row;
 align-items: center;
 justify-content:space-evenly ;
 margin: auto;
+width: 70%;
 }
 
 

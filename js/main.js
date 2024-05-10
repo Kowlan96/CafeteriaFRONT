@@ -458,7 +458,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } else {
                   console.log("funciono categoria");
                     // De lo contrario, realizar la solicitud para obtener los productos de la categoría seleccionada
-                    response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
+                    //response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
+                    response = await fetchProductoCategoria(tipoCafe);
                 }
 
                 if (response.ok) {
@@ -539,7 +540,6 @@ function crearCard(productData) {
 
     const descripcionElement = document.createElement('p');
     descripcionElement.textContent = productData.descripcion_producto;
-
     const imagenElement = document.createElement('img');
     imagenElement.src = productData.imagen;
     imagenElement.alt = productData.nombre_producto;
