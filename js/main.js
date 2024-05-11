@@ -630,7 +630,7 @@ function crearCard(productData) {
                 eliminarCantidad(productData);
                 if (eliminado == -1) {
                     nuevoElementoCarrito.parentNode.removeChild(nuevoElementoCarrito);
-
+                    let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
                     const divtaxes = document.getElementById('taxes');
                     const divsubtotal = document.getElementById('subtotal');
                     const divtotal = document.getElementById('total');
