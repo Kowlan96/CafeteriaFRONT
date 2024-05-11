@@ -14,6 +14,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #fff4e8;
   }
   /* Estilos para el header */
 
@@ -244,7 +245,7 @@ background-color: #e87000;
 
 /*PARTE BODY*/
 .imagenIntro{
-  background-image: url("../img/medievalTavernDesenfocado.png");
+  /*background-image: url("../img/medievalTavernDesenfocado.png");*/
   height: 800px;
   width: auto;
   background-size: cover;
