@@ -17,7 +17,7 @@ function showPrevencion() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("noticias").style.display = "none";
     document.getElementById("comite").style.display = "none";
-    document.getElementById("prev").style.display = "inline-block";
+    document.getElementById("prev").style.display = "grid";
     document.getElementById("calendario-entero").style.display = "none";
 }
 
