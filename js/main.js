@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             await realizarPedido();
             location.reload(); // Recarga la página
         } else {
-            alert('No se ha iniciado sesión')
+            alert('User not logged in')
         }
 
         //
@@ -713,7 +713,7 @@ function crearCard(productData) {
 
         //let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
         /*const divtotal = document.getElementById('total');*/
-        divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO + '€';
+        divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
         yaexiste = false;
     });
 

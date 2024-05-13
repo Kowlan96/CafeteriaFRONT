@@ -491,6 +491,10 @@ background-color: #e87000;
   padding-top: 100px;
 }
 
+.containerFormulario h2{
+  font-size: 30px;
+}
+
     /* Estilos para el formulario */
     .contact-form {
       max-width: 600px;

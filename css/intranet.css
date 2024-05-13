@@ -210,6 +210,10 @@ header {
     padding-top: 20px;
   }
 
+  .organigrama{
+    text-align: center;
+  }
+
   .textoFunciones{
     display: flex;
     flex-wrap: wrap;
@@ -244,6 +248,8 @@ header {
 
   .funcion p{
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .textoFuncionesInfoExtra{
@@ -294,6 +300,8 @@ header {
     border: 1px solid #000;
     border-radius: 5px;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
   }
@@ -314,7 +322,7 @@ header {
     display: flex;
     flex-direction: column;
     font-family: 'mordredBold';
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
   .prevencion{
@@ -323,13 +331,14 @@ header {
     font-size: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 50%;
   }
 
   .prevencionEnlace{
     display: flex;
     align-items: center;    
-    width: 60%;
-    margin: 5px;
+    width: 50%;
+    margin: 20px;
     border: 1px solid #000; /* Borde opcional para visualizar mejor */
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
@@ -352,8 +361,8 @@ header {
   .prevencionEnlaceVideo{
     display: flex;
     align-items: center;    
-    width: 60%;
-    margin: 5px;
+    width: 50%;
+    margin: 40px;
     border: 1px solid #000; /* Borde opcional para visualizar mejor */
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
@@ -366,9 +375,14 @@ header {
   }
 
   .prevencionEnlaceVideo iframe{
-    height: 240px;
-    width: 480px;
+    height: 200px;
+    width: 400px;
     border: 1px solid #000000;
+  }
+
+  .prevencionEnlaceVideo p{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .enlaceTabla{
