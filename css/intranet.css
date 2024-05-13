@@ -229,6 +229,11 @@ header {
     padding-top: 30px;
     padding-bottom: 10px;
     font-family: 'mordredBold';
+    background-color: white;
+    border: 1px solid #000; /* Borde opcional para visualizar mejor */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
   }
 
   .funcion h3{
@@ -237,7 +242,9 @@ header {
     padding-bottom: 10px;
   }
 
-
+  .funcion p{
+    padding-bottom: 10px;
+  }
 
   .textoFuncionesInfoExtra{
     text-align: center;
@@ -283,6 +290,12 @@ header {
     width: 50%;
     margin: auto;
     padding-bottom: 15px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
   }
 
   #prev{
@@ -324,6 +337,7 @@ header {
     padding-bottom: 20px;
     font-size: 20px;
     font-family: 'mordredBold';
+    background-color: white;
   }
 
   .prevencionEnlaceDentro{
@@ -348,11 +362,12 @@ header {
     padding-left: 10px;
     font-size: 20px;
     font-family: 'mordredBold';
+    background-color: white;
   }
 
   .prevencionEnlaceVideo iframe{
-    height: 360px;
-    width: 640px;
+    height: 240px;
+    width: 480px;
     border: 1px solid #000000;
   }
 
