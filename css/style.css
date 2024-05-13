@@ -13,7 +13,7 @@
 /* Estilos generales */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'mordredBold';
       background-color: #fff4e8;
   }
   /* Estilos para el header */
@@ -26,6 +26,7 @@
     width: 99%;
     z-index: 999; /* Asegura que el encabezado esté en la parte superior */
     position: fixed;
+    font-size: 20px;
   }
   /* Estilos para el contenedor del menú */
   .menu-container {

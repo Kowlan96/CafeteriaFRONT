@@ -580,8 +580,8 @@ function crearCard(productData) {
             nuevaImagen.src = productData.imagen; // Reemplaza con la ruta de la imagen que deseas agregar
             nuevaImagen.style.paddingLeft = '5px';
             nuevaImagen.style.paddingRight = '5px';
-            nuevaImagen.style.height = "200px";
-            nuevaImagen.style.width = "200px";
+            nuevaImagen.style.height = "80%";
+            nuevaImagen.style.width = "80%";
             nuevaImagen.style.borderRadius = "50px";
             nuevaImagen.alt = 'Descripción de la imagen'; // Reemplaza con una descripción adecuada
             nuevoElementoCarrito.appendChild(nuevaImagen);
@@ -778,6 +778,7 @@ function createModalForCard(card, productData) {
     const modalTitle = document.createElement('h2');
     modalTitle.textContent = productData.nombre_producto;
     modalContent.appendChild(modalTitle);
+    modalTitle.style.fontSize = '25px';
 
     const modalTrailerWrapper = document.createElement('div');
     modalTrailerWrapper.style.position = 'relative';
@@ -785,13 +786,15 @@ function createModalForCard(card, productData) {
 
     const trailerIframe = document.createElement('img');
     trailerIframe.src = productData.imagen;
-    trailerIframe.style.height= "300px";
-    trailerIframe.style.width= "300px";
+    trailerIframe.style.height= "70%";
+    trailerIframe.style.width= "70%";
+    trailerIframe.style.borderRadius = "50px";
     modalTrailerWrapper.appendChild(trailerIframe);
 
     const modalDescription = document.createElement('p');
     modalDescription.textContent = productData.descripcion_producto;
     modalContent.appendChild(modalDescription);
+    modalDescription.style.fontSize = '18px';
 
     // Agregar el contenido al modal
     modal.appendChild(modalContent);

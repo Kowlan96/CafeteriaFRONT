@@ -12,6 +12,7 @@
 body {
     margin: 0;
     background-color: #fff4e8;
+    font-family: 'mordredBold';
 }
 
 .contenidoIntroIntranet{
@@ -59,6 +60,7 @@ header {
     width: 100%;
     z-index: 999; /* Asegura que el encabezado esté en la parte superior */
     position: fixed;
+    font-size: 20px;
   }
 
 .menu-container-intranet {
@@ -143,6 +145,7 @@ header {
     margin: 0 auto;
     overflow: hidden;
     font-family: 'mordredBold';
+    font-size: 20px;
   }
   
   .news-slider {
@@ -155,6 +158,9 @@ header {
   .news-slide {
     flex: 0 0 100%;
     padding-top: 20px;
+  }
+  .news-slide p{
+    padding-top: 10px;
   }
 
   
@@ -227,6 +233,8 @@ header {
 
   .funcion h3{
     font-size: 28px;
+    text-decoration: underline;
+    padding-bottom: 10px;
   }
 
 
@@ -236,6 +244,11 @@ header {
     display: grid;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .textoFuncionesInfoExtra p{
+    font-size: 20px;
   }
 
   .link {
@@ -251,6 +264,7 @@ header {
   .diasRetribuidos{
     text-align: center;
     font-family: 'mordredBold';
+    font-size: 25px;
   }
 
   .enlaceDias{
@@ -268,6 +282,7 @@ header {
     font-size: 20px;
     width: 50%;
     margin: auto;
+    padding-bottom: 15px;
   }
 
   #prev{
@@ -275,6 +290,7 @@ header {
     display: none;
     text-align: center;
     justify-items: center;
+    padding-top: 10px;
   }
 
 .introPrevencion{
@@ -291,7 +307,7 @@ header {
   .prevencion{
     color: #000000;
     font-family: 'mordredBold';
-    font-size: 30px;
+    font-size: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
