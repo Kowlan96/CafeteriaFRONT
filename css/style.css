@@ -106,12 +106,16 @@
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
   cursor: pointer;
 }
+
 /* Estilos para el formulario dentro de la ventana modal */
 #loginForm {
   margin-top: 20px;
@@ -154,10 +158,13 @@ margin-top: 20px;
 }
 
 .close2 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover{
   cursor: pointer;
 }
 
@@ -211,10 +218,14 @@ background-color: #e87000;
 }
 
 .close3 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  position: relative;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close3:hover{
   cursor: pointer;
 }
 
