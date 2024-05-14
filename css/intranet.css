@@ -281,9 +281,22 @@ header {
   }
 
   .enlaceDias{
-    background-image: url(../img/DiasRetribuidos.png);
-    height: 200px;
+    background-image: url(../img/permiso_retribuido.jpg);
+    height: 300px;
     width: 500px;
+    background-size: cover;
+  }
+
+  .funcionesIMG{
+    background-image: url(../img/convenio.jpg);
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+    
+  }
+
+  .funcionesIMG:hover{
+    cursor: pointer;
   }
 
   .enlaceDias:hover{
