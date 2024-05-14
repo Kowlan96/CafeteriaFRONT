@@ -285,6 +285,8 @@ header {
     height: 300px;
     width: 500px;
     background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
   .funcionesIMG{
@@ -292,7 +294,8 @@ header {
     height: 300px;
     width: 500px;
     background-size: cover;
-    
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
   .funcionesIMG:hover{
@@ -309,14 +312,14 @@ header {
     width: 50%;
     margin: auto;
     padding-bottom: 15px;
-    background-color: white;
-    border: 1px solid #000;
+    /*background-color: white;
+    border: 1px solid #000;*/
     border-radius: 5px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
+    /*box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
   }
 
   #prev{
@@ -348,18 +351,11 @@ header {
   }
 
   .prevencionEnlace{
-    display: flex;
-    align-items: center;    
-    width: 50%;
-    margin: 20px;
-    border: 1px solid #000; /* Borde opcional para visualizar mejor */
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
+    text-align: center;
+    display: grid;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 20px;
-    font-family: 'mordredBold';
-    background-color: white;
+    font-size: 25px;
   }
 
   .prevencionEnlaceDentro{
@@ -373,23 +369,15 @@ header {
 
   .prevencionEnlaceVideo{
     display: flex;
-    align-items: center;    
-    width: 50%;
-    margin: 40px;
+    align-items: center;
     border: 1px solid #000; /* Borde opcional para visualizar mejor */
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    font-size: 20px;
-    font-family: 'mordredBold';
-    background-color: white;
   }
 
   .prevencionEnlaceVideo iframe{
-    height: 200px;
-    width: 400px;
+    height: 360px;
+    width: 640px;
     border: 1px solid #000000;
   }
 
@@ -399,12 +387,13 @@ header {
   }
 
   .enlaceTabla{
-    background-image: url(../img/tablaRiesgos.png);
+    background-image: url(../img/prevriesgos.jpg);
     background-color: transparent;
-    height: 200px;
-    width: 80%;
+    height: 300px;
+    width: 500px;
     background-size: cover;
-    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
   .enlaceTabla:hover{
