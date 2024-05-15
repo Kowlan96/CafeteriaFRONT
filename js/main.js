@@ -3,10 +3,9 @@ let iniciado = false;
 let yaexiste = false;
 let divCantidadRepetido;
 
-function hideCafe(){
+function hideCafe() {
     document.getElementById("peliOutput").style.display = "none";
 }
-
 
 /*LOGIN*/
 async function login() {
@@ -225,8 +224,8 @@ async function agregarCantidadRepetido(Producto) {
 
 
 async function eliminarCantidad(Producto) {
-    let lineasCompra = JSON.parse(localStorage.getItem('lineasCompra')) || [];
-    const pedido = JSON.parse(localStorage.getItem('pedido')) || {};
+    var lineasCompra = JSON.parse(localStorage.getItem('lineasCompra')) || [];
+    var pedido = JSON.parse(localStorage.getItem('pedido')) || {};
 
     // Verificar si el producto ya está en el carrito
     const indexProducto = lineasCompra.findIndex(item => item.ID_PRODUCTO === Producto.id_producto);
@@ -236,20 +235,24 @@ async function eliminarCantidad(Producto) {
         lineasCompra[indexProducto].CANTIDAD -= 1;
         lineasCompra[indexProducto].PRECIO_TOTAL = lineasCompra[indexProducto].CANTIDAD * Producto.precio_unitario;
 
+        pedido.SUBTOTAL_PEDIDO = lineasCompra.reduce((subtotal, item) => subtotal + (item.PRECIO_TOTAL || 0), 0);
+        pedido.TOTAL_PEDIDO = pedido.SUBTOTAL_PEDIDO + pedido.SUBTOTAL_PEDIDO * (pedido.IVA_PEDIDO / 100);
+
         localStorage.setItem('lineasCompra', JSON.stringify(lineasCompra));
     } else if (indexProducto !== -1 && lineasCompra[indexProducto].CANTIDAD === 1) {
         // Si el producto está en el carrito y la cantidad es igual a 1, eliminar el producto del carrito
         borrarDelCarrito(lineasCompra[indexProducto].ID_PRODUCTO);
-
+        pedido = JSON.parse(localStorage.getItem('pedido')) || {};
         let lineas2Compra = JSON.parse(localStorage.getItem('lineasCompra')) || [];
         localStorage.setItem('lineasCompra', JSON.stringify(lineas2Compra));
+
 
         eliminado = -1;
     }
 
+    //pedido = JSON.parse(localStorage.getItem('pedido')) || {}
     // Actualizar el subtotal y el total del pedido
-    pedido.SUBTOTAL_PEDIDO = lineasCompra.reduce((subtotal, item) => subtotal + (item.PRECIO_TOTAL || 0), 0);
-    pedido.TOTAL_PEDIDO = pedido.SUBTOTAL_PEDIDO + pedido.SUBTOTAL_PEDIDO * (pedido.IVA_PEDIDO / 100);
+
 
     // Guardar el carrito actualizado en el local storage
 
@@ -345,9 +348,10 @@ form.onsubmit = function (event) {
 
 async function register() {
     const datosregistro = {
-        usuario: document.getElementById('username2').value,
-        email: document.getElementById('email').value,
-        contraseña: document.getElementById('password2').value
+        nombre: document.getElementById('username2').value,
+        correo: document.getElementById('email').value,
+        contraseña: document.getElementById('password2').value,
+        direccion: document.getElementById('direccion').value
     };
     console.log(datosregistro)
     try {
@@ -378,8 +382,9 @@ registerForm.addEventListener("submit", function (event) {
 
     // Recuperar los valores del formulario
     var usuario = document.getElementById("username2").value;
-    var email = document.getElementById("correo_usuario").value;
+    var email = document.getElementById("email").value;
     var contraseña = document.getElementById("password2").value;
+    var direccion = document.getElementById('direccion').value;
 
     // Aquí puedes hacer algo con los datos, como enviarlos a un servidor para registrar al usuario
 
@@ -387,6 +392,7 @@ registerForm.addEventListener("submit", function (event) {
     console.log("Nombre de usuario:", usuario);
     console.log("Correo electrónico:", email);
     console.log("Contraseña:", contraseña);
+    console.log("Direccion: ", direccion)
 
     // Puedes redirigir al usuario a otra página después de registrarse, por ejemplo:
     // window.location.href = "pagina_de_bienvenida.html";
@@ -439,18 +445,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const categoriaBtns = document.querySelectorAll('.categoria-btn');
     const productosContainer = document.querySelector('.productos');
     categoriaBtns.forEach(btn => {
-        
+
         btn.addEventListener('click', async () => {
             const tipoCafe = btn.value;
             console.log(tipoCafe);
             try {
                 let response;
                 if (tipoCafe === 'none') {
-                  console.log("funciono productos");
+                    console.log("funciono productos");
                     // Si se selecciona "none", realizar la solicitud para obtener todos los productos
-                    response = await fetch(`http://localhost:3000/producto`); 
+                    response = await fetch(`http://localhost:3000/producto`);
                 } else {
-                  console.log("funciono categoria");
+                    console.log("funciono categoria");
                     // De lo contrario, realizar la solicitud para obtener los productos de la categoría seleccionada
                     response = await fetch(`http://localhost:3000/producto/categoria?tipo=${tipoCafe}`);
                     //response = await fetchProductoCategoria(tipoCafe);
@@ -459,10 +465,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (response.ok) {
                     const productData = await response.json();
                     console.log(productData);
-    
+
                     //Esto limpia el contenedor antes de agregar nuevos cafes
                     peliOutputGenero.innerHTML = "";
-    
+
                     //Esto agrega nuevos cafes al contenedor
                     productData.forEach(element => {
                         const card = crearCard(element);
@@ -475,7 +481,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error('Error al obtener productos por categoría', error);
             }
         });
-  }); 
+    });
 
 
     botonFinalizarCompra = document.getElementById('PayBtn');
@@ -633,18 +639,19 @@ function crearCard(productData) {
                     console.log(productData.precio_unitario);
                     console.log(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario);
                     console.log(pedido.IVA_PEDIDO);
-                    console.log(pedido.IVA_PEDIDO/100);
-                    console.log((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100));
+                    console.log(pedido.IVA_PEDIDO / 100);
+                    console.log((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario) * (pedido.IVA_PEDIDO / 100));
 
-                    divtotal.textContent = 'Total: ' + ((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)+(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100)).toFixed(2) + '€';
-                    divsubtotal.textContent = 'Subtotal: ' + (pedido.SUBTOTAL_PEDIDO - productData.precio_unitario).toFixed(2) + '€';
-                    divtaxes.textContent = 'Taxes: ' + ((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)+(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)*(pedido.IVA_PEDIDO/100)-(pedido.SUBTOTAL_PEDIDO - productData.precio_unitario)).toFixed(2) + '€';
+                    //divtotal.textContent = 'Total: ' + ((pedido.SUBTOTAL_PEDIDO - productData.precio_unitario) + (pedido.SUBTOTAL_PEDIDO - productData.precio_unitario) * (pedido.IVA_PEDIDO / 100)).toFixed(2) + '€';
+                    divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
+                    divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO.toFixed(2) + '€';
+                    divtaxes.textContent = 'Taxes: ' + (pedido.TOTAL_PEDIDO - pedido.SUBTOTAL_PEDIDO).toFixed(2) + '€';
 
-                    pedido.SUBTOTAL_PEDIDO = 0;
+                    /*pedido.SUBTOTAL_PEDIDO = 0;
                     pedido.TOTAL_PEDIDO = 0;
 
                     // Actualizar el carrito y el pedido en el local storage
-                    localStorage.setItem('pedido', JSON.stringify(pedido));
+                    localStorage.setItem('pedido', JSON.stringify(pedido));*/
                     eliminado = 0;
 
 
@@ -696,7 +703,7 @@ function crearCard(productData) {
 
             const modal = document.getElementById('myModal3');
             modal.style.display = 'block';
-            
+
             let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
             const divtotal = document.getElementById('total');
             const divtaxes = document.getElementById('taxes');
@@ -781,8 +788,8 @@ function createModalForCard(card, productData) {
 
     const trailerIframe = document.createElement('img');
     trailerIframe.src = productData.imagen;
-    trailerIframe.style.height= "70%";
-    trailerIframe.style.width= "70%";
+    trailerIframe.style.height = "70%";
+    trailerIframe.style.width = "70%";
     trailerIframe.style.borderRadius = "50px";
     modalTrailerWrapper.appendChild(trailerIframe);
 
