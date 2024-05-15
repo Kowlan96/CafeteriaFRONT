@@ -4,7 +4,7 @@ let yaexiste = false;
 let divCantidadRepetido;
 
 function hideCafe(){
-    document.getElementById("cafeOutput").style.display = "none";
+    document.getElementById("peliOutput").style.display = "none";
 }
 
 //PARALLAX
@@ -414,15 +414,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     //HACER QUE APAREZCAN DIRECTAMENTE LOS CAFES AL CARGAR LA PÁGINA
     const productData = await service.getProducto();
-    renderCafe(productData);
+    renderMovies(productData);
 
     //VARIABLES
     const loadButton = document.getElementById('loadButton');
-    var cafeOutput = document.getElementById('cafeOutput');
-    //const loadCategoriaMovies = document.getElementById('loadCategoriaMovies');
+    var peliOutput = document.getElementById('peliOutput');
+    const loadCategoriaMovies = document.getElementById('loadCategoriaMovies');
     const opciones = document.getElementById('opciones');
-    //const movieInput = document.getElementById('movieInput');
-    //const favOutput = document.getElementById('mostrarFavorito');
+    const movieInput = document.getElementById('movieInput');
+    const favOutput = document.getElementById('mostrarFavorito');
     const registerForm = document.getElementById('registerForm');
 
 
@@ -467,12 +467,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     console.log(productData);
     
                     //Esto limpia el contenedor antes de agregar nuevos cafes
-                    cafeOutputGenero.innerHTML = "";
+                    peliOutputGenero.innerHTML = "";
     
                     //Esto agrega nuevos cafes al contenedor
                     productData.forEach(element => {
                         const card = crearCard(element);
-                        cafeOutputGenero.appendChild(card);
+                        peliOutputGenero.appendChild(card);
                     });
                 } else {
                     console.error('Error al obtener productos por categoría');
@@ -501,17 +501,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
-function renderCafe(productData) {
-    const cafeOutputGenero = document.getElementById('cafeOutputGenero');
-    cafeOutputGenero.innerHTML = '';
+function renderMovies(productData) {
+    const peliOutputGenero = document.getElementById('peliOutputGenero');
+    peliOutputGenero.innerHTML = '';
     if (productData) {
         productData.forEach(element => {
             console.log(productData[[element]]);
             card = crearCard(element);
-            cafeOutputGenero.appendChild(card);
+            peliOutputGenero.appendChild(card);
         })
     } else {
-        cafeOutputGenero.innerHTML = `<p>Error al cargar los datos del Movies.</p>`;
+        peliOutputGenero.innerHTML = `<p>Error al cargar los datos del Movies.</p>`;
     }
 }
 

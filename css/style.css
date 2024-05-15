@@ -324,7 +324,7 @@ background-color: #e87000;
 }
 
 
-#cafeOutputGenero {
+#peliOutputGenero {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;    
@@ -332,14 +332,14 @@ background-color: #e87000;
   height: auto;
 }
 
-#cafeOutputGenero{
+#peliOutputGenero{
   margin-bottom: 40px;
 }
 
 
-#cafeOutputFav::-webkit-scrollbar,
-#cafeOutputGenero::-webkit-scrollbar,
-#cafeOutput::-webkit-scrollbar {
+#peliOutputFav::-webkit-scrollbar,
+#peliOutputGenero::-webkit-scrollbar,
+#peliOutput::-webkit-scrollbar {
   display: none;
 }
 
