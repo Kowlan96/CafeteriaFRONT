@@ -7,12 +7,6 @@ function hideCafe(){
     document.getElementById("peliOutput").style.display = "none";
 }
 
-//PARALLAX
-window.addEventListener('scroll', function() {
-    let scrollPosition = window.pageYOffset;
-    let parallaxBg = document.querySelector('.parallax-bg');
-    parallaxBg.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-});
 
 /*LOGIN*/
 async function login() {
@@ -714,7 +708,7 @@ function crearCard(productData) {
 
         //let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
         /*const divtotal = document.getElementById('total');*/
-        divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
+        //divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
         yaexiste = false;
     });
 
