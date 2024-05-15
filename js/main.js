@@ -708,13 +708,13 @@ function crearCard(productData) {
             const divtaxes = document.getElementById('taxes');
             const divsubtotal = document.getElementById('subtotal');
             divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
-            divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO,toFixed(2) + '€';
+            divsubtotal.textContent = 'Subtotal: ' + pedido.SUBTOTAL_PEDIDO.toFixed(2) + '€';
             divtaxes.textContent = 'Taxes: ' + (pedido.TOTAL_PEDIDO - pedido.SUBTOTAL_PEDIDO).toFixed(2) + '€'
         }
 
         //let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
         /*const divtotal = document.getElementById('total');*/
-        //divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
+        divtotal.textContent = 'Total: ' + pedido.TOTAL_PEDIDO.toFixed(2) + '€';
         yaexiste = false;
     });
 
